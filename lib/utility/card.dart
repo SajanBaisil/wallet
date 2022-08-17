@@ -17,7 +17,7 @@ class MyCard extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Container(
         width: 300,
-        padding: EdgeInsets.all(20),
+        padding:const EdgeInsets.all(20),
         decoration: BoxDecoration(
             color: Color,
             borderRadius: BorderRadius.circular(16)),
@@ -29,26 +29,25 @@ class MyCard extends StatelessWidget {
               mainAxisAlignment: 
               MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
+               const SizedBox(
                   height: 10,
                 ),
-                Image.asset('icons/visa-card.png',
-                height: 30,)
+                Image.asset('assets/images/visa-card.png',width: 50,),
 
               ],
             ),
-            Text(
+          const  Text(
               'Balance',
               style: TextStyle(color: Colors.white, fontSize: 14),
             ),
-            SizedBox(
+          const  SizedBox(
               height: 10,
             ),
             Text(
               '\$' + balance.toString(),
-              style: TextStyle(color: Colors.white, fontSize: 24,fontWeight: FontWeight.bold),
+              style:const TextStyle(color: Colors.white, fontSize: 24,fontWeight: FontWeight.bold),
             ),
-            SizedBox(
+           const SizedBox(
               height: 30,
             ),
             Row(
@@ -57,7 +56,7 @@ class MyCard extends StatelessWidget {
                 //card  number
                 Text(
                   cardnumber.toString(),
-                  style: TextStyle(
+                  style:const TextStyle(
                     color: Colors.white,
                   ),
                 ),

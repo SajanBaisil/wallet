@@ -27,18 +27,18 @@ class _HomePageState extends State<HomePage> {
         
         backgroundColor: Colors.grey[300],
         floatingActionButton: FloatingActionButton(onPressed: (){},
-        backgroundColor: Color.fromARGB(255, 38, 70, 96),
-        child: Icon(Icons.monetization_on,size: 32,),),
+        backgroundColor:const Color.fromARGB(255, 38, 70, 96),
+        child:const Icon(Icons.monetization_on,size: 32,),),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-          color: Color.fromARGB(255, 136, 169, 195),
+          color:const Color.fromARGB(255, 136, 169, 195),
           child: Padding(
             padding: const EdgeInsets.only(top: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                IconButton(onPressed: (){}, icon: Icon(Icons.home,size: 32,)),
-                IconButton(onPressed: (){}, icon: Icon(Icons.settings,size: 32,)),
+                IconButton(onPressed: (){}, icon:const Icon(Icons.home,size: 32,)),
+                IconButton(onPressed: (){}, icon:const Icon(Icons.settings,size: 32,)),
               ],
             ),
           ),
@@ -66,20 +66,20 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   Container(
-                      padding: EdgeInsets.all(2),
-                      decoration: BoxDecoration(
+                      padding:const EdgeInsets.all(2),
+                      decoration: const BoxDecoration(
                         //color: Colors.grey[400],
                         shape: BoxShape.circle,
                       ),
                       child:
-                          IconButton(onPressed: () {}, icon: Icon(Icons.add)))
+                          IconButton(onPressed: () {}, icon:const Icon(Icons.add)))
                 ],
               ),
             ),
 
             //cards
 
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
             Container(
@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
               child: PageView(
                 controller: _controller,
                 scrollDirection: Axis.horizontal,
-                children: [
+                children:const [
                   MyCard(
                     balance: 5250.56,
                     cardnumber: 234567545,
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
 
@@ -143,7 +143,7 @@ class _HomePageState extends State<HomePage> {
               effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade700),
             ),
 
-            SizedBox(
+          const  SizedBox(
               height: 20,
             ),
 
@@ -155,17 +155,17 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   // send button
-                 MyButton(iconImagePath: Image.asset('icons/send.png'), buttonText: 'Send'),
+                 MyButton(iconImagePath: Image.asset('assets/images/send.png'), buttonText: 'Send'),
 
                   //pay button
-                  MyButton(iconImagePath: Image.asset('icons/credit-card.png'), buttonText: 'Pay'),
+                  MyButton(iconImagePath: Image.asset('assets/images/credit-card.png'), buttonText: 'Pay'),
 
                   // bills button
-                  MyButton(iconImagePath: Image.asset('icons/receipt.png'), buttonText: 'Bills')
+                  MyButton(iconImagePath: Image.asset('assets/images/receipt.png'), buttonText: 'Bills')
                 ],
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
 
@@ -176,10 +176,10 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   //statistics
                  
-                  MyList(iconImagePath: Image.asset('icons/laptop.png'), maintext: 'Statistics', subtext: 'Payments and Incomes', icon: Icons.arrow_forward),
+                  MyList(iconImagePath: Image.asset('assets/images/laptop.png'), maintext: 'Statistics', subtext: 'Payments and Incomes', icon: Icons.arrow_forward),
                   
                   //transactions
-                  MyList(iconImagePath: Image.asset('icons/swap.png'), maintext: 'Transactions', subtext: 'Transaction History', icon: Icons.arrow_forward),
+                  MyList(iconImagePath: Image.asset('assets/images/swap.png'), maintext: 'Transactions', subtext: 'Transaction History', icon: Icons.arrow_forward),
                 ],
               ),
             )
